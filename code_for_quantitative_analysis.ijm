@@ -2,7 +2,7 @@
 getDateAndTime(year, month, dayOfWeek, dayOfMonth, hour, minute, second, msec);
 timeID = ""+year+""+month+1+""+dayOfMonth+""+IJ.pad(hour,2)+IJ.pad(minute,2)+IJ.pad(second,2);
 
-//Do something for selected folder
+//Select folder
 showMessage("Select Open Folder");
 openDir = getDirectory("Choose a Directory");
 showMessage("Select Save Folder");
@@ -18,7 +18,7 @@ for (i=0; i<list.length;i++){
 };
 print("Macro Finished");
 
-//Define operations (e.g. Rotate 90 deg Right)
+//Define operations
 function operation(){
 
 	open(openDir+list[i]);
@@ -61,11 +61,6 @@ function operation(){
 	rename(newthrename);
 	saveAs("Tiff", saveDir+newthrename);
 	close();
-	
-	//newname = title+"_Rotated_"+timeID+".jpg";
-	//rename(newname);
-	//saveAs("Jpeg", saveDir+newname);
-	//close(newname);
 
 	}
 
